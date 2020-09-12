@@ -1,3 +1,9 @@
+'''
+Test to see if the negative of each number is stored in the hash.
+If so, that's a answer. If not, store the number as a key in the hasn.
+'''
+
+
 def has_negatives(a):
 
     ht = {}

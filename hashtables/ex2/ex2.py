@@ -1,8 +1,14 @@
-#  Hint:  You may not need all of these.  Remove the unused functions.
 class Ticket:
     def __init__(self, source, destination):
         self.source = source
         self.destination = destination
+
+
+'''
+For each ticket store the ticket as a value in a hash with it's source as
+the key. Start with the first ticket, look up it's destination in the hash,
+add it to the route and iterate through all the ticket's destinations.
+'''
 
 
 def reconstruct_trip(tickets, length):

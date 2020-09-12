@@ -1,3 +1,12 @@
+'''
+Take each file and split it to get the file name
+Key that file name into a hash with the full path in a list as the value.
+If that file name already exists in the hash, append the file name to the list.
+
+Take each query and concat the lists of paths stored as values in the hash.
+'''
+
+
 def finder(files, queries):
 
     file_to_paths = {}
