@@ -1,8 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    print('arrays: ', arrays)
+
+    ht = {}
+    num_arrays = 0
+    for i, arr in enumerate(arrays):
+        num_arrays += 1
+        for num in arr:
+            if num in ht:
+                ht[num].append(i)
+            else:
+                ht[num] = [i]
+
+    result = []
+    for key, value in ht.items():
+        print(key, value)
+        if len(value) == num_arrays:
+            result.append(key)
 
     return result
 
