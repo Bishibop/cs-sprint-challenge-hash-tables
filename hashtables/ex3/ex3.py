@@ -1,5 +1,13 @@
+'''
+For each array, iterate over each number.
+Key each number into a hash. If it isn't there set the value as 1.
+If it is there, increment the value.
+Iterate over all key value pairs. If the value is equal to the number of
+arrays you iterated over, that key (the number) is an answer.
+'''
+
+
 def intersection(arrays):
-    print('arrays: ', arrays)
 
     ht = {}
     num_arrays = 0
@@ -7,15 +15,14 @@ def intersection(arrays):
         num_arrays += 1
         for num in arr:
             if num in ht:
-                ht[num].append(i)
+                ht[num] += 1
             else:
-                ht[num] = [i]
+                ht[num] = 1
 
     result = []
-    for key, value in ht.items():
-        print(key, value)
-        if len(value) == num_arrays:
-            result.append(key)
+    for num, occurences in ht.items():
+        if occurences == num_arrays:
+            result.append(num)
 
     return result
 
