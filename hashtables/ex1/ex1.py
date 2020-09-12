@@ -1,7 +1,12 @@
 def get_indices_of_item_weights(weights, length, limit):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    remainders = {}
+    indici_pair = None
 
-    return None
+    for i, weight in enumerate(weights):
+        if limit - weight in remainders:
+            indici_pair = (i, remainders[limit - weight])
+            break
+        else:
+            remainders[weight] = i
+
+    return indici_pair
